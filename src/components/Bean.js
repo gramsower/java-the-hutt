@@ -26,3 +26,5 @@ Bean.propTypes = {
   id: PropTypes.string,
   whenBeanClicked: PropTypes.func
 };
+
+export default Bean;
