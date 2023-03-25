@@ -13,7 +13,7 @@ function BeanDetail(props) {
         <h4>{bean.origin}</h4>
         <p>{bean.tastingNotes}</p>
         <button onClick ={onClickingEdit}>Update Bean Details</button>
-        <button onClick ={() => onClickingDelete(ticket.id) }>Delete Bean from Inventory</button>
+        <button onClick ={() => onClickingDelete(ticket.id) }>Degilete Bean from Inventory</button>
         <hr />
       </React.Fragment>
     );
