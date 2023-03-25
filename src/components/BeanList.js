@@ -8,15 +8,14 @@ function BeanList(props) {
       <hr />
       {props.beanList.map((bean) =>
       <Bean
-      whenBeanClicked={ props.onBeanSelection }
-      name={bean.name}
-      price={bean.price}
-      roast={bean.roast}
-      origin={bean.origin}
-      tastingNotes={bean.tastingNotes}
-      /*need to add decrementing amount left here */
-      id={bean.id}
-      key={bean.id} /> 
+        whenBeanClicked={ props.onBeanSelection }
+        name={bean.name}
+        price={bean.price}
+        roast={bean.roast}
+        origin={bean.origin}
+        tastingNotes={bean.tastingNotes}
+        id={bean.id}
+        key={bean.id} /> 
       )}
     </React.Fragment>
   );

@@ -9,10 +9,11 @@ function NewBeanForm(props) {
     event.preventDefault();
     props.onNewBeanCreation({
       name: event.target.name.value,
-      price: event.target.location.value,
-      roast: event.target.location.value,
-      origin: event.target.location.value,
-      tastingNotes: event.target.location.value,
+      price: event.target.price.valueAsNumber,
+      roast: event.target.roast.value,
+      origin: event.target.origin.value,
+      tastingNotes: event.target.origin.value,
+      amount: event.target.amount.value,
       id: v4()
     });
   }

@@ -78,9 +78,12 @@ class DisplayControl extends React.Component {
                                 onClickingDelete = { this.handleDeletingBean }
                                 onClickingEdit = { this.handleEditClick } />
       buttonText= "Return to Bean List";
-    } else {
+    } else if(this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewBeanForm onNewBeanCreation={this.handleAddingNewBeanToList} />;
-      buttonText="Add Beans"
+      buttonText = "Return to Bean List";
+    } else {
+      currentlyVisibleState = <BeanList beanList ={this.state.mainBeanList} onBeanSelection={this.handleChangingSelectedBean} />
+      buttonText="Add Beans";
     }
     return (
       <React.Fragment>

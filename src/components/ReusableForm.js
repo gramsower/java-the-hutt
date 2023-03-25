@@ -27,7 +27,8 @@ function ReusableForm(props) {
         <input
           type='number'
           name='amount'
-          placeholder='Amount Available' />
+          placeholder='Amount Available (lbs)' />
+        <button type='submit'>{props.buttonText}</button>
       </form>
     </React.Fragment>
   );
