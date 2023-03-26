@@ -41,6 +41,16 @@ class DisplayControl extends React.Component {
     this.setState({selectedBean: selectedBean});
   }
 
+  handleBeanSale = (id) => {
+    const selectedBean = this.state.mainBeanList.filter(bean => bean.id === id)[0];
+    if (selectedBean.amount>=1) {
+      const beansSold = {...selectedBean, amount: selectedBean.amount -=1};
+      const newMainBeanList = this.state.mainBeanList.filter(bean => bean.id !== id).concat(beansSold);
+      this.setState({
+        mainBeanList: newMainBeanList
+      });
+    }
+  }
 
   handleEditClick = () => {
     this.setState({editing: true });
@@ -49,7 +59,7 @@ class DisplayControl extends React.Component {
   handleEditingBeanInList = (beanToEdit) => {
     const editedMainBeanList = this.state.mainBeanList
     .filter(bean => bean.id !==this.state.selectedBean.id)
-    .concact.apply(beanToEdit);
+    .concat(beanToEdit);
     this.setState({
       mainBeanList: editedMainBeanList,
       editing: false,
@@ -70,7 +80,9 @@ class DisplayControl extends React.Component {
     let buttonText = null;
 
     if(this.state.editing) {
-      currentlyVisibleState = <EditBeanForm bean = { this.state.selectedBean } onEditBean = {this.handleEditingBeanInList } />
+      currentlyVisibleState = <EditBeanForm 
+                                bean = { this.state.selectedBean } 
+                                onEditBean = {this.handleEditingBeanInList } />
       buttonText= "Return to Bean List";
     } else if(this.state.selectedBean !=null) {
       currentlyVisibleState = <BeanDetail
@@ -82,7 +94,10 @@ class DisplayControl extends React.Component {
       currentlyVisibleState = <NewBeanForm onNewBeanCreation={this.handleAddingNewBeanToList} />;
       buttonText = "Return to Bean List";
     } else {
-      currentlyVisibleState = <BeanList beanList ={this.state.mainBeanList} onBeanSelection={this.handleChangingSelectedBean} />
+      currentlyVisibleState = <BeanList 
+                                beanList ={this.state.mainBeanList} 
+                                onBeanSelection={this.handleChangingSelectedBean} 
+                                onSellBeansClicked={this.handleBeanSale} />
       buttonText="Add Beans";
     }
     return (

@@ -9,10 +9,12 @@ function BeanList(props) {
       {props.beanList.map((bean) =>
       <Bean
         whenBeanClicked={ props.onBeanSelection }
+        whenSellBeansClicked={ props.onSellBeansClicked }
         name={bean.name}
         price={bean.price}
         roast={bean.roast}
         origin={bean.origin}
+        amount={bean.amount}
         tastingNotes={bean.tastingNotes}
         id={bean.id}
         key={bean.id} /> 
@@ -23,7 +25,8 @@ function BeanList(props) {
 
 BeanList.propTypes= {
   beanList: PropTypes.array,
-  onBeanSelection: PropTypes.func
+  onBeanSelection: PropTypes.func,
+  onSellBeansClicked: PropTypes.func
 };
 
 export default BeanList;

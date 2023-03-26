@@ -9,10 +9,10 @@ function NewBeanForm(props) {
     event.preventDefault();
     props.onNewBeanCreation({
       name: event.target.name.value,
-      price: event.target.price.valueAsNumber,
+      price: event.target.price.value,
       roast: event.target.roast.value,
       origin: event.target.origin.value,
-      tastingNotes: event.target.origin.value,
+      tastingNotes: event.target.tastingNotes.value,
       amount: event.target.amount.value,
       id: v4()
     });

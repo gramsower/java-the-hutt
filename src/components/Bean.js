@@ -4,27 +4,27 @@ import PropTypes from "prop-types";
 function Bean(props) {
   return (
     <React.Fragment>
-      <div onCLick = {() => props.whenBeanClicked(props.id)}>
+      <div onClick = {() => props.whenBeanClicked(props.id)}>
         <h3>{props.name}</h3>
-        <h4>{props.price}</h4>
-        <h4>{props.roast}</h4>
-        <h4>{props.origin}</h4>
-        <p>{props.tastingNotes}</p>
-        {/* Insert ability to track lbs remaining here */}
+        <h5>${props.price} per pound</h5>
+        <h5>Inventory: {props.amount} lbs in stock</h5>
         <hr />
       </div>
+      <button onClick ={() => props.whenSellBeansClicked(props.id)}> Sell A Pound of Beans!</button>
     </React.Fragment>
   );
 }
 
 Bean.propTypes = {
   name: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
   roast: PropTypes.string.isRequired,
   origin: PropTypes.string.isRequired,
   tastingNotes: PropTypes.string,
+  amount: PropTypes.number.isRequired,
   id: PropTypes.string,
-  whenBeanClicked: PropTypes.func
+  whenBeanClicked: PropTypes.func,
+  whenSellBeansClicked: PropTypes.func
 };
 
 export default Bean;
