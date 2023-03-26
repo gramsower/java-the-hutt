@@ -1,6 +1,5 @@
 import React from "react";
-// import coffeeHeader from "./../img/coffeeheader.jpg";
-// import helpDeskImage from "./../img/helpdesksmall.jpg";
+import coffeeHeader from "./../img/coffeeheader.jpg";
 
 function Header() {
   return (

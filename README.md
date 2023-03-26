@@ -1,16 +1,40 @@
-#Java the Hutt
+# Java the Hutt
 
-##Coffee Inventory Control
+## Coffee Inventory Control
 
-#### By **Greg Ramsower**
+### By **Greg Ramsower**
 
-This Application allows a user to 
+This Application allows a user to track coffee bean inventory for their coffee shop, Java the Hutt.
+The user can add a bulk order of beans and input the following parameters for each bean type:
+  - Name
+  - Price per pound (USD)
+  - Initial inventory level in pounds
+  - Roast level
+  - Origin
+  - Tasting notes
 
-# Getting Started with Create React App
+After a bean has been entered into inventory, the user can quickly decrement each bean type in one-pound increments by clicking on a 'sell a pound of beans' button below each bean type.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Optionally, the user can edit a bean type to correct information, adjust inventory level directly, or delete the bean type once all of it has sold.
 
-##
+### Technologies Used
+*_Javascript_
+*_React_
+*_HTML_
+*_CSS_
+*_node.js_
+
+### Setup and Installation
+* Clone this repository to your local machine
+* Navigate to the project's root directory in the terminal
+* Install dependencies by entering '$npm install'
+* Use the commands below to start the application 
+
+### Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).  CLick on the link to find more information.
+
+To use this application, enter one of the below commands in your terminal:
 
 ### `npm start`
 
@@ -30,42 +54,15 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Application Layout & Component Tree
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![application layout diagram](/src/components/img/coffeeShop.jpg "Application layout and component tree.")
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Known Bugs and Limitations
+* No known functional bugs
+* Zero styling
+* Empty footer as of this version
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### License
+* (c) 2023 / Greg Ramsower
+[GNU GPL3.0](https://choosealicense.com/licenses/gpl-3.0/#)
