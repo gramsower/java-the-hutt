@@ -18,11 +18,11 @@ After a bean has been entered into inventory, the user can quickly decrement eac
 Optionally, the user can edit a bean type to correct information, adjust inventory level directly, or delete the bean type once all of it has sold.
 
 ### Technologies Used
-*_Javascript_
-*_React_
-*_HTML_
-*_CSS_
-*_node.js_
+* _Javascript_
+* _React_
+* _HTML_
+* _CSS_
+* _node.js_
 
 ### Setup and Installation
 * Clone this repository to your local machine
@@ -56,7 +56,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### Application Layout & Component Tree
 
-![application layout diagram](/src/components/img/coffeeShop.jpg "Application layout and component tree.")
+![application layout diagram](/src/img/coffeeShop.jpg "Application layout and component tree.")
 
 ### Known Bugs and Limitations
 * No known functional bugs

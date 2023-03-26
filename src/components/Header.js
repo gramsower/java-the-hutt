@@ -5,7 +5,8 @@ function Header() {
   return (
     <React.Fragment>
       <h1>Java the Hutt</h1>
-      { /* <img src={helpDeskImage} alt="Coffee beans" /> */}
+      <h2>Bulk Coffee by the Pound</h2>
+      <img src={coffeeHeader} alt="Coffee beans" />
     </React.Fragment>
   );
 }
