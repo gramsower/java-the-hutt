@@ -17,8 +17,8 @@ function Bean(props) {
 
 Bean.propTypes = {
   name: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
-  amount: PropTypes.number.isRequired,
+  price: PropTypes.string.isRequired,
+  amount: PropTypes.string.isRequired,
   id: PropTypes.string,
   whenBeanClicked: PropTypes.func,
   whenSellBeansClicked: PropTypes.func
